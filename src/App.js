@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
 import "./App.css";
+import Display from "./Components/Display";
 
 const App = () => {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
@@ -9,7 +10,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Stopwatch</h1>
+      <Display time={time} />
     </div>
   );
 };

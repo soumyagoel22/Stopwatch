@@ -51,15 +51,19 @@ const App = () => {
   const resume = () => start();
 
   return (
-    <div className="App">
-      <Display time={time} />
-      <BtnDisplay
-        status={status}
-        start={start}
-        resume={resume}
-        reset={reset}
-        stop={stop}
-      />
+    <div className="main-section">
+      <div className="clock-holder">
+        <div className="stopwatch">
+          <Display time={time} />
+          <BtnDisplay
+            status={status}
+            start={start}
+            resume={resume}
+            reset={reset}
+            stop={stop}
+          />
+        </div>
+      </div>
     </div>
   );
 };

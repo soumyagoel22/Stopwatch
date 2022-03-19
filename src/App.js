@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./styles.css";
 import "./App.css";
 import Display from "./Components/Display";
+import BtnDisplay from "./Components/BtnDisplay";
 
 const App = () => {
   const [time, setTime] = useState({ ms: 0, s: 0, m: 0, h: 0 });
@@ -52,6 +53,13 @@ const App = () => {
   return (
     <div className="App">
       <Display time={time} />
+      <BtnDisplay
+        status={status}
+        start={start}
+        resume={resume}
+        reset={reset}
+        stop={stop}
+      />
     </div>
   );
 };
